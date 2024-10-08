@@ -4,7 +4,7 @@ matplotlib.use('TkAgg')  # Ensure Tkinter backend for rendering graphs
 import matplotlib.pyplot as plt
 
 # Set the initial position and velocity
-y_pos = 200  # Initial y position (starts above ground)
+y_pos = 40  # Initial y position (starts above ground)
 y_velocity = 0  # Initial velocity (stationary)
 gravity = -0.5  # Gravity (negative to simulate downward motion)
 ground_level = 0  # Ground level (below the starting point)
@@ -18,7 +18,7 @@ current_time = 0
 time_step = 0.02  # 20 ms for each time step
 
 # Main loop to simulate the bouncing ball
-while current_time < 10:  # Run the simulation for 10 seconds
+while current_time < 5:  # Run the simulation for 10 seconds
     # Update velocity and position
     y_velocity += gravity  # Simulate gravity (pull down)
     y_pos += y_velocity  # Update the ball's position
@@ -45,7 +45,7 @@ while current_time < 10:  # Run the simulation for 10 seconds
 plt.plot(time_steps, y_positions)
 plt.title("Bouncing Ball Simulation")
 plt.xlabel("Time (s)")
-plt.ylabel("Ball Position (y_pos)")
+plt.ylabel("height (m)")
 plt.grid(True)
 
 # Show the plot
